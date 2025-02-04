@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    <title>Register</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.round-corners {
+    border-radius: 8px;
+}
+
+#user-form {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#user-form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-item {
+    margin-bottom: 15px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+#form-submit {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#form-submit:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#error-msg {
+    color: red;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.text-link {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.text-link:hover {
+    color: #0056b3;
+}
+</style>
+<body>
+    <form id="user-form" class="round-corners" action="/register" method="post">
+        <div class="form-item">
+            <label for="register-username">Username:</label>
+            <input id="register-username" class="form-input round-corners" type="text" name="username" required>
+        </div>
+        <div class="form-item">
+            <label for="register-email">Email:</label>
+            <input id="register-email" class="form-input round-corners" type="email" name="email" required>
+        </div>
+        <div class="form-item">
+            <label for="register-password">Password:</label>
+            <input id="register-password" class="form-input round-corners" type="password" name="password" required>
+        </div>
+        <div class="form-item">
+            <label for="register-password">Confirm Password:</label>
+            <input id="register-password" class="form-input round-corners" type="password" name="confirm-password" required>
+        </div>
+
+        {% if error %}<p id="error-msg">{{error}}</p>{% endif %}
+
+        <input id="form-submit" class="form-item round-corners" type="submit" value="Register">
+
+        <div id="switch-form">
+            <p>Already have an account? <a class="text-link" href="/login">Login</a></p>
+        </div>
+    </form>
+</body>
+</html>

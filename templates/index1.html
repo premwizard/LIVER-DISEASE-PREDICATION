@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h2 {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.title p {
+  color: #777;
+  font-size: 15px;
+  margin: 16px 0 0 0;
+}
+
+nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 4;
+}
+
+nav .topNav .container,
+nav .bottomNav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .topNav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 0;
+}
+
+nav .topNav .container .icons i {
+  color: #fff;
+  margin-right: 10px;
+}
+
+nav .topNav .container .contact a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  margin-left: 16px;
+  -webkit-transition: color 600ms;
+  transition: color 600ms;
+}
+
+nav .topNav .container .contact a:hover {
+  color: #fab700;
+}
+
+nav .bottomNav {
+  padding: 16px 0;
+}
+
+nav .bottomNav .container .logo {
+  cursor: pointer;
+}
+
+nav .bottomNav .container .menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  margin-left: 18px;
+  font-size: 15px;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background: url("static/img/h1.jpg") no-repeat center/cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.main .container {
+  margin: auto;
+  color: #fff;
+  position: relative;
+}
+
+.main .container h3 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.main .container h1 {
+  font-size: 50px;
+  line-height: 1;
+  margin: 22px 0;
+}
+
+.main .container p {
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.main .container .btn {
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 14px 30px;
+  background: #fab700;
+  color: #fff;
+  font-size: 14px;
+  margin: 34px 0 0 0;
+  border: 1px solid #fab700;
+  -webkit-transition: background 700ms;
+  transition: background 700ms;
+}
+
+.main .container .btn:hover {
+  background: transparent;
+}
+
+.services {
+  width: 100%;
+  padding: 120px 0;
+}
+
+.services .container {
+  padding: 80px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.services .container .card {
+  width: 100%;
+  max-width: 31.5%;
+  background: #f9f9ff;
+  padding: 24px;
+  cursor: pointer;
+  -webkit-transition: background 1100ms;
+  transition: background 1100ms;
+}
+
+.services .container .card:hover {
+  background: #fab700;
+}
+
+.services .container .card .cardBg {
+  height: 220px;
+  background: url("static/img/s4.avif") no-repeat center/cover;
+}
+
+.services .container .card .cardBg.secondBg {
+  background: url("static/img/s5.webp") no-repeat center/cover;
+}
+
+.services .container .card .cardBg.thirdBg {
+  background: url("static/img/s6.jpg") no-repeat center/cover;
+}
+
+.services .container .card .cardInfo h3 {
+  margin: 22px 0;
+}
+
+.services .container .card .cardInfo p {
+  margin: 16px 0;
+  color: #777;
+}
+
+.features {
+  width: 100%;
+  background: #f9f9ff;
+  padding: 120px 0;
+}
+
+.features .container {
+  padding: 60px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.features .container .featureCard {
+  width: 100%;
+  max-width: 31%;
+  background: #fff;
+  padding: 44px 28px;
+  margin: 20px 0;
+  -webkit-transition: background 1100ms;
+  transition: background 1100ms;
+  cursor: pointer;
+}
+
+.features .container .featureCard:hover {
+  background: #fab700;
+}
+
+.features .container .featureCard .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features .container .featureCard .heading i {
+  margin-right: 10px;
+}
+
+.features .container .featureCard p {
+  text-align: left;
+  line-height: 1.5;
+  color: #777;
+}
+
+.clients {
+  width: 100%;
+  background: #fab700;
+  padding: 120px 0;
+}
+
+.clients .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.clients .container .numbers {
+  width: 100%;
+  max-width: 18%;
+}
+
+.clients .container .numbers h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.clients .container .numbers p {
+  font-size: 15px;
+  margin: 5px 0 0 0;
+}
+
+.gallery {
+  width: 100%;
+  padding: 120px 0;
+}
+
+.gallery .container {
+  padding: 60px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.gallery .container img {
+  width: 32%;
+  height: 230px;
+  margin: 12px 0;
+  cursor: pointer;
+}
+
+.gallery .container img:nth-child(2), .gallery .container img:nth-child(6) {
+  width: 40%;
+}
+
+.gallery .container img:first-of-type, .gallery .container img:last-of-type {
+  width: 58%;
+}
+
+.blog {
+  width: 100%;
+  background: #f9f9ff;
+  padding: 120px 0;
+}
+
+.blog .container {
+  padding: 60px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog .container .blogCard {
+  width: 100%;
+  max-width: 23%;
+  cursor: pointer;
+}
+
+.blog .container .blogCard:hover .blogInfo h3 {
+  color: #fab700;
+}
+
+.blog .container .blogCard:hover .blogBg img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.blog .container .blogCard .blogBg {
+  overflow: hidden;
+}
+
+.blog .container .blogCard .blogBg img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -webkit-transition: -webkit-transform 1000ms;
+  transition: -webkit-transform 1000ms;
+  transition: transform 1000ms;
+  transition: transform 1000ms, -webkit-transform 1000ms;
+}
+
+.blog .container .blogCard .blogDate {
+  padding: 18px 0;
+}
+
+.blog .container .blogCard .blogDate span {
+  background: #222;
+  color: #777;
+  padding: 6px 18px;
+  font-size: 14px;
+}
+
+.blog .container .blogCard .blogInfo h3 {
+  font-size: 20px;
+  line-height: 1.1;
+  margin: 4px 0;
+  -webkit-transition: color 1000ms;
+  transition: color 1000ms;
+}
+
+.blog .container .blogCard .blogInfo p {
+  color: #777;
+  line-height: 1.4;
+  margin: 14px 0 4px 0;
+}
+
+.blog .container .blogCard .blogInfo .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer {
+  width: 100%;
+  background: #04091e;
+  padding: 120px 0;
+  color: #fff;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .container .box {
+  width: 100%;
+  max-width: 35%;
+}
+
+footer .container .box:first-of-type p {
+  margin-bottom: 38px;
+}
+
+footer .container .box:last-of-type {
+  max-width: 18%;
+}
+
+footer .container .box h2 {
+  font-size: 19px;
+  margin-bottom: 22px;
+}
+
+footer .container .box p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+footer .container .box p i {
+  color: #fab700;
+}
+
+footer .container .box p a {
+  text-decoration: none;
+  color: #fab700;
+}
+
+footer .container .box .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+}
+
+footer .container .box .email input {
+  width: 80%;
+  padding: 13px;
+  border: none;
+  outline: none;
+}
+
+footer .container .box .email .btn {
+  background: #fab700;
+  padding: 13px 18px;
+  color: #fff;
+}
+
+footer .container .box .icons {
+  padding: 20px 0;
+}
+
+footer .container .box .icons i {
+  margin-right: 14px;
+  -webkit-transition: color 700ms;
+  transition: color 700ms;
+  cursor: pointer;
+}
+
+footer .container .box .icons i:hover {
+  color: #fab700;
+}
+/*# sourceMappingURL=style.css.map */
+</style>
+<body>
+
+    <nav>
+        <div class="topNav">
+            <div class="container">
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-dribbble"></i>
+                    <i class="fab fa-behance"></i>
+                </div>
+            
+            </div>
+        </div>
+        <div class="bottomNav">
+            <div class="container">
+                <div class="logo">
+                    <img src="./img/logo.webp" alt="logo">
+                </div>
+                <div class="menu">
+                    <a href="#/">home</a>
+                    <a href="#/">about us</a>
+                    <a href="/register">register</a>
+                    <a href="/login">login</a>
+                   
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main">
+        <div class="overlay"></div>
+        <div class="container">
+            <h3>OPENNING ON 21ST FEBRUARY, 2018</h3>
+            <h1>Liver dieases detection </h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna<br> aliqua. Ut enim ad minim. sed do eiusmod tempor incididunt..</p>
+            <a href="#/" class="btn">get started</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="title">
+            <h2>Our Offered Services</h2>
+            <p>Who are in extremely love with eco friendly system.</p>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="cardBg"></div>
+                <div class="cardInfo">
+                    <h3>Emergency room services</h3>
+                    <p>An emergency department is a dedicated area in a hospital that is organised and administered to provide a high. standard of emergency care to people in the community who perceive the need for, or are in need of, acute or. urgent care including hospital</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBg secondBg"></div>
+                <div class="cardInfo">
+                    <h3>Short-term hospitalization.</h3>
+                    <p>The Short Stay Unit (SSU) is a type of admission that can provide targeted care for patients requiring brief hospitalization (≤5 days), as well as patients ready to be discharged as soon as their clinical condition is resolved.
+                      .</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardBg thirdBg"></div>
+                <div class="cardInfo">
+                    <h3>X-ray/radiology services.</h3>
+                    <p>An x-ray is a type of radiation used to create a picture of the inside of your body. As x-ray beams pass through your body they are absorbed differently by various structures in the body, such as your bones and soft tissues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="title">
+            <h2>Some Features that Made us Unique</h2>
+            <p>Who are in extremely love with eco friendly system.</p>
+            <div class="container">
+                <div class="featureCard">
+                    <div class="heading">
+                        <i class="far fa-user"></i>
+                        <h3>Expert Technicians</h3>
+                    </div>
+                    <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+                    </p>
+                </div>
+                <div class="featureCard">
+                    <div class="heading">
+                        <i class="far fa-newspaper"></i>
+                        <h3></h3>Professional Service</h3>
+                    </div>
+                    <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+                    </p>
+                </div>
+                <div class="featureCard">
+                    <div class="heading">
+                        <i class="fas fa-phone"></i>
+                        <h3>Great Support</h3>
+                    </div>
+                    <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+                    </p>
+                </div>
+                <div class="featureCard">
+                    <div class="heading">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Technical Skills</h3>
+                    </div>
+                    <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+                    </p>
+                </div>
+                <div class="featureCard">
+                    <div class="heading">
+                        <i class="far fa-gem"></i>
+                        <h3>Highly Recommended</h3>
+                    </div>
+                    <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+                    </p>
+                </div>
+                <div class="featureCard">
+                    <div class="heading">
+                        <i class="far fa-comment"></i>
+                        <h3>Positive Reviews</h3>
+                    </div>
+                    <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients">
+        <div class="container">
+            <div class="numbers">
+                <h2>2536</h2>
+                <p>Projects Completed</p>
+            </div>
+            <div class="numbers">
+                <h2>6784</h2>
+                <p>Really Happy Clients</p>
+            </div>
+            <div class="numbers">
+                <h2>1059</h2>
+                <p>Total Tasks Completed</p>
+            </div>
+            <div class="numbers">
+                <h2>2239</h2>
+                <p>Cups of Coffee Taken</p>
+            </div>
+            <div class="numbers">
+                <h2>434</h2>
+                <p>In House Professionals</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="title">
+            <h2>Latest From Our Gallery</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                et<br>
+                dolore magna aliqua.</p>
+            <div class="container">
+                <img src="static/img/g10.jpg" alt="g1">
+                <img src="static/img/g11.png" alt="g2">
+                <img src="static/img/g13.jpg" alt="g3">
+                <img src="static/img/g14.jpg" alt="g4">
+            </div>
+        </div>
+    </section>
+
+   
+    <footer>
+        <div class="container">
+            <div class="box">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    dolore magna aliqua.</p>
+                <p>Copyright &copy;2019 All rights reserved | This template is made with <i class="far fa-heart"></i> by
+                    <a href="https://colorlib.com/" target="_blank">Colorlib</a></p>
+            </div>
+            <div class="box">
+                <h2>Newsletter</h2>
+                <p>Stay update with our latest</p>
+                <div class="email">
+                    <input type="text" placeholder="Enter Email">
+                    <a href="#/" class="btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="box">
+                <h2>Follow Us</h2>
+                <p>Let us be social</p>
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-dribbble"></i>
+                    <i class="fab fa-behance"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
